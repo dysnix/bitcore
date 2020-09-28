@@ -19,8 +19,7 @@ const ApiHostDefault = process.env.API_HOST_DEFAULT || 'https://api.bitcore.io/a
 
 const EnvApiHosts: { [env: string]: { [chain: string]: string } } = {
   prod: {
-    default: ApiHostDefault,
-    ETH: 'https://api-eth.bitcore.io/api'
+    default: ApiHostDefault
   },
   dev: { default: '/api' }
 };
