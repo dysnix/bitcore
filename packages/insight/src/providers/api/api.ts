@@ -15,9 +15,11 @@ export interface NetworkSettings {
 }
 
 const CurrentEnv = process.env.ENV || 'dev';
+const ApiHostDefault = process.env.API_HOST_DEFAULT || 'https://api.bitcore.io/api';
 
 const EnvApiHosts: { [env: string]: { [chain: string]: string } } = {
   prod: {
+    default: ApiHostDefault,
     ETH: 'https://api-eth.bitcore.io/api'
   },
   dev: { default: '/api' }
@@ -103,7 +105,7 @@ export class ApiProvider {
   }
 
   getHostForChain(chain: string) {
-    return CurrentApiHosts[chain] || this.defaults.getDefault('%API_HOST_DEFAULT%');
+    return CurrentApiHosts[chain] || CurrentApiHosts.default;
   }
 
   public getUrlPrefix(chain, network): string {
