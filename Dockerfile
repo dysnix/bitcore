@@ -12,6 +12,7 @@ RUN set -x \
         google-chrome-stable
 
 ENV CHROME_BIN /usr/bin/google-chrome
+ENV NODE_ENV production
 
 # Log versions
 
