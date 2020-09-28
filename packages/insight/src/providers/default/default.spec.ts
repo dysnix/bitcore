@@ -24,6 +24,7 @@ describe('DefaultProvider', () => {
   it('has defaults', () => {
     expect(defaults.getDefault('%CHAIN%')).toBe('BTC');
     expect(defaults.getDefault('%API_PREFIX%')).toBe('/api');
+    expect(defaults.getDefault('%API_HOST_DEFAULT%')).toBe('https://api.bitcore.io/api');
     expect(defaults.getDefault('%NETWORK%')).toBe('regtest');
   });
 });
