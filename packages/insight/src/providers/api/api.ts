@@ -103,7 +103,7 @@ export class ApiProvider {
   }
 
   getHostForChain(chain: string) {
-    return CurrentApiHosts[chain] || this.defaults.getDefault('%API_HOST_DEFAULT%') : ;
+    return CurrentApiHosts[chain] || this.defaults.getDefault('%API_HOST_DEFAULT%');
   }
 
   public getUrlPrefix(chain, network): string {
