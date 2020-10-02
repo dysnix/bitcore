@@ -52,7 +52,7 @@ function setTrustedPeers(config: ConfigType): ConfigType {
 }
 const Config = function(): ConfigType {
   let config: ConfigType = {
-    maxPoolSize: 50,
+    maxPoolSize: parseInt(process.env.MAX_POOL_SIZE || 50),
     port: 3000,
     dbUrl: process.env.DB_URL || '',
     dbHost: process.env.DB_HOST || '127.0.0.1',
