@@ -51,7 +51,7 @@ function setTrustedPeers(config: ConfigType): ConfigType {
   return config;
 }
 const Config = function(): ConfigType {
-  let maxPoolSize = process.env.MAX_POOL_SIZE || 50
+  let maxPoolSize = process.env.MAX_POOL_SIZE || '50'
   let config: ConfigType = {
     maxPoolSize: parseInt(maxPoolSize),
     port: 3000,
